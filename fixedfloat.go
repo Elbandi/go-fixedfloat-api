@@ -92,8 +92,8 @@ type Rate struct {
 // GetRate getting the exchange rate of a pair of currencies in the selected direction and type of rate.
 func (ff *FixedFloat) GetRate(fromCurrency string, toCurrency string, amount float64) (Rate, Rate, error) {
 	payload := map[string]interface{}{
-		"fromCcy":   fromCurrency,
-		"toCcy":     toCurrency,
+		"fromCcy":   strings.ToUpper(fromCurrency),
+		"toCcy":     strings.ToUpper(toCurrency),
 		"amount":    amount,
 		"direction": "from",
 		"type":      "float",

@@ -5,7 +5,7 @@ import (
 )
 
 type jsonResponse struct {
-	Code    int             `json:"code"`
+	Code    Integer             `json:"code"`
 	Message string          `json:"msg"`
 	Data    json.RawMessage `json:"data"`
 }

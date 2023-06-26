@@ -9,3 +9,10 @@ func (bit *Bool) UnmarshalJSON(b []byte) error {
 	*bit = Bool(txt == "1" || txt == "true")
 	return nil
 }
+
+func (bit *Bool) Toint() int {
+	if *bit {
+		return 1
+	}
+	return 0
+}
